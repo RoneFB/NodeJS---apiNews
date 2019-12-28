@@ -14,3 +14,6 @@ npm install mysql --save
 
 /*Instalando Consign (Mapeador de rotas e relouders de views*/
 npm install consign --save
+
+/*Incluindo BOdy parser para a requisição*/
+npm install body-parser --save
