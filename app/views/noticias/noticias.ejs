@@ -14,12 +14,14 @@
 				<td>Título</td>
 				<td>Notícia</td>
 			</tr>
-
+			<% for(var i=0; i < noticias.length; i++ ){ %>
 			<tr>
-				<td>1</td>
-				<td>Título da notícia</td>
-				<td>Conteudo</td>
+				<td><%= noticias[i].id_noticias %></td>
+				<td><%= noticias[i].titulo %></td>
+				<td><%= noticias[i].noticia %></td>
 			</tr>
+
+			<% } %>
 		</table>
 
 	</body>
