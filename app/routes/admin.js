@@ -1,11 +1,17 @@
-module.exports = function(app){
-    app.get('/formulario_inclusao_noticia', function(req, resp){
+module.exports = function(application){
+    application.get('/formulario_inclusao_noticia', function(req, resp){
         resp.render("admin/form_add_noticia")
     })
     
-    app.post('/noticias/salvar', function(req, resp){
-        var noticias = req.body;
+    application.post('/noticias/salvar', function(req, resp){
+        var noticia = req.body;
 
-        resp.send(noticias)
+        //save
+        var conn = application.config.dbConnection();
+        var NoticiasDAO = new application.app.models.NoticiasDAO(conn);
+
+        NoticiasDAO.salvarNoticia(noticia, function(error, result){
+            resp.redirect('/noticias');
+        });
     })
 };
