@@ -11,3 +11,6 @@ npm install -g nodemon
 
 /*Instalando modulo mysql*/
 npm install mysql --save
+
+/*Instalando Consign (Mapeador de rotas e relouders de views*/
+npm install consign --save
