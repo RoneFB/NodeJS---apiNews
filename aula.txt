@@ -17,3 +17,6 @@ npm install consign --save
 
 /*Incluindo BOdy parser para a requisição*/
 npm install body-parser --save
+
+/*Incluindo express-validator*/
+npm install express-validator --save
